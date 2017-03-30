@@ -129,5 +129,21 @@ public class Mac286Array {
 		}
 	}
 	
+	public void insertionSort(){
+		for(int i=1; i<nElements; i++){
+			// element var contains the data we intend on 
+			// bringing over to the sorted area
+			double element = myArray[i];
+			 // j is always pointing to the last index of the sorted 
+			// area, which is before the i 
+			int j = i-1;
+			while(j >= 0 && myArray[j] > element){ // is greater than the elem we indend on brong over
+				myArray[j+1] = myArray[j];
+				j--; // always go back until one elem before the i
+			}
+			myArray[j+1] = element;
+		}
+	}
+	
 	
 } // end of class

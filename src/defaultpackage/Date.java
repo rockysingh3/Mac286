@@ -12,19 +12,19 @@ public class Date {
 			month = 1;
 			year = 2000;
 		}
-		public Date(int m, int d, int y) {
-			setYear(y);
-			setMonth(m);
-			setDay(d);
+		public Date(Date d) {
+			setYear(d.year);
+			setMonth(d.month);
+			setDay(d.year);
 		}
 		public Date(String strD){
 			String [] convertedDate = strD.split("/");
 			if (convertedDate.length != 3){
 				System.out.println("Invalid date format");
 			}
-			month = Integer.parseInt(convertedDate[0]);
-			day = Integer.parseInt(convertedDate[1]);
-			year = Integer.parseInt(convertedDate[2]);
+			year = Integer.parseInt(convertedDate[0]);
+			month = Integer.parseInt(convertedDate[1]);
+			day = Integer.parseInt(convertedDate[2]);
 		}
 		//accessors
 		public int getDay() {return day;}
